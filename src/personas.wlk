@@ -5,6 +5,7 @@ object olivia {
 	
 	method recibirMasajes(){concentracion = concentracion + 3}
 	method discutir(){concentracion = concentracion - 1}
+	method darseUnBanioDeVapor() {concentracion = concentracion + 2}
 }
 
 object bruno {
@@ -40,12 +41,10 @@ object ramiro {
 	method nivelDeContractura() {return contractura}
 	method recibirMasajes()
 	{ 
-		if (contractura == 1)
-			contractura = contractura - 1
-		if(contractura == 0)
-			contractura = 0 	
-		else contractura >= 2
-		 	contractura= contractura - 2
+		if (contractura <= 2)
+			contractura= 0	
+		if (contractura > 2)
+		 	contractura -= 2
 		return (contractura) 	 	
 	} 
 	method darseUnBanioDeVapor() {pielGrasosa = false}
